@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body{
+	background-color: #58ACFA;
+	color: white;
+}
+
+#btn{
+	border-radius: 5px;
+}
+
+#txt{
+	border-radius:5px;
+}
+
+#formulario{
+	border-radius: 15px;
+	background-color: #A9D0F5;
+	border: 10px black solid;
+	padding: 10px;
+	margin: 20px;
+	text-align: center;
+	color:black;
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	font-size: 20px;
+}
