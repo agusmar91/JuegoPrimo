@@ -3,29 +3,35 @@ let contador = 0;
 function primo() {
 	
 	var numero = parseInt(document.getElementById("txt").value);
-	var limite = Math.round(Math.sqrt(numero));
-	
-	if (numero == 2||numero==1) {
+	var esPrimo= true;
+	if (numero == 2) {
 		
 		contador++;
 		window.alert("Es primo! LLevas un total de " + contador+ " aciertos!!");
 		
-	} else {
+	}
 		
-		for (var i = 2; i <= limite; i++) {
+		for (var i = 2; i < numero; i++) {
 			
-			if (numero % i === 0) {
-				window.alert("No es primo, conseguiste un total de " + contador+ " aciertos!!");
-				document.location.href = "index.html";
-				break;
+			if (numero % i == 0) {
+				esPrimo=false;
 				
-			} else {
-				
-				contador++;
-				window.alert("Es primo! LLevas un total de " + contador+ " aciertos!!");
 				break;
 				
 			}
 		}
+		
+		if(esPrimo) {
+			contador++;
+			window.alert("Es primo! LLevas un total de " + contador+ " aciertos!!");
+		} else {
+			window.alert("No es primo, conseguiste un total de " + contador+ " aciertos!!");
+			document.location.href = "index.html";
+			contador = 0;
+		}
+			
+		
+
+		
 	}
-}
+
